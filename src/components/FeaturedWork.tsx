@@ -4,10 +4,10 @@ import { ExternalLink, Github } from 'lucide-react';
 const FeaturedWork = () => {
   const projects = [
     {
-      title: 'Enterprise Network System',
-      description: 'Designed and implemented a scalable network infrastructure supporting 1000+ users with high availability and security measures.',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=2000',
-      tags: ['Network Architecture', 'Security', 'Infrastructure'],
+      title: 'Electric Consumption Calculator',
+      description: 'Developed an application to calculate theoretical expenses based on the electrical consumption of household appliances.',
+      image: './public/img/project1.png',
+      tags: ['React', 'JavaScript', 'Tyscript'],
     },
     {
       title: 'Cloud Migration Platform',
@@ -24,7 +24,7 @@ const FeaturedWork = () => {
   ];
 
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="py-20 bg-gradient-to-b from-black to-gray-900 text-white">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
@@ -69,10 +69,10 @@ const FeaturedWork = () => {
                       <Github className="w-5 h-5" />
                       Code
                     </button>
-                    <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                    <a href="https://calculadora-de-consumo-electrico.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                       <ExternalLink className="w-5 h-5" />
                       Live Demo
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

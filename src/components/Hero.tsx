@@ -21,7 +21,7 @@ const Hero = () => {
           {/* Main heading with gradient text */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 text-transparent bg-clip-text animate-gradient">
-              Systems Engineer
+            Hi, I'm Iber Masco
             </span>
           </h1>
 
