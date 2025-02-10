@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Settings, Code2, MonitorDot, Github, Linkedin, Mail, Server, Database, Cloud, Globe, Lock, Terminal, Heart, ArrowRight, Sun, Moon, Menu, X } from 'lucide-react';
 
+
+
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -38,6 +40,7 @@ function App() {
 
   return (
     <div className={`min-h-screen flex flex-col ${isDarkMode ? 'dark' : ''}`}>
+      {/* Navbar */}
       <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b dark:border-gray-700 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -80,7 +83,7 @@ function App() {
       <main className="flex-grow bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 pt-24 pb-16">
           {/* Hero Section */}
-          <div
+         <div
             id="home"
             className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-3xl shadow-sm 
             transition-all duration-300 hover:shadow-lg animate-fade-in items-start justify-end px-4 pb-10 sm:px-10"
@@ -93,11 +96,9 @@ function App() {
                 Hi, I'm Iber Masco</h1>
               <p className="text-white text-sm font-normal leading-normal sm:text-base sm:font-normal sm:leading-normal">
               I’m a Systems Engineer student at Universidad Simón Bolívar with over a year of experience in full-stack software development. 
-              I specialize in Python, Java, React, Angular, and SQL databases. Since 2019, I’ve been creating custom solutions for small businesses to optimize processes and improve efficiency. 
-              Passionate about innovation, 
-              I’ve showcased my projects at university fairs and am eager to contribute to impactful technology solutions.
+              I specialize in Python, Java, React, Angular, and SQL databases. 
                 </p>
-            </div>
+            </div> 
             <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 sm:h-12 sm:px-5 bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold leading-normal sm:text-base sm:font-bold transition-colors">
               Get in Touch
             </button>
@@ -352,9 +353,7 @@ function App() {
           </div>
 
           <div className="border-t mt-8 pt-8 flex flex-col dark:text-white sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p className="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">
-              © {new Date().getFullYear()} Laura's Portfolio. All rights reserved.
-            </p>
+           
             <div className="dark:text-white flex items-center text-sm text-gray-600">
               <span>Made with</span>
               <Heart className="h-4 w-4 mx-1 text-red-500" />
