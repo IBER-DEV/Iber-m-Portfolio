@@ -4,74 +4,95 @@ import { ExternalLink, Github } from 'lucide-react';
 const FeaturedWork = () => {
   const projects = [
     {
-      title: 'Electric Consumption Calculator',
-      description: 'Developed an application to calculate theoretical expenses based on the electrical consumption of household appliances.',
-      image: './public/img/project1.png',
-      tags: ['React', 'JavaScript', 'Tyscript'],
+      title: 'Calculadora de Consumo Eléctrico',
+      description: 'Desarrollé una aplicación para calcular gastos teóricos basados en el consumo eléctrico de electrodomésticos.',
+      image: '/img/project1.png',
+      tech: [
+        { name: 'Next.js', dark: true },
+        { name: 'Tailwind CSS', dark: false }
+      ]
     },
     {
-      title: 'Cloud Migration Platform',
-      description: 'Developed an automated cloud migration platform reducing deployment time by 60% and improving resource utilization.',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000',
-      tags: ['Cloud Computing', 'Automation', 'DevOps'],
+      title: 'Plataforma de Migración a la Nube',
+      description: 'Desarrollé una plataforma automatizada de migración a la nube, reduciendo el tiempo de despliegue en un 60% y mejorando la utilización de recursos.',
+      image: '/img/project2.png',
+      tech: [
+        { name: 'Next.js', dark: true },
+        { name: 'Tailwind CSS', dark: false }
+      ]
     },
     {
-      title: 'IoT Monitoring Dashboard',
-      description: 'Created a real-time monitoring system for IoT devices with advanced analytics and predictive maintenance capabilities.',
-      image: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80&w=2000',
-      tags: ['IoT', 'Analytics', 'Real-time Data'],
+      title: 'Panel de Monitoreo IoT',
+      description: 'Creé un sistema de monitoreo en tiempo real para dispositivos IoT con analíticas avanzadas y capacidades de mantenimiento predictivo.',
+      image: '/img/project3.png',
+      tech: [
+        { name: 'Next.js', dark: true },
+        { name: 'Tailwind CSS', dark: false }
+      ]
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900 text-white">
-      <div className="container mx-auto px-6">
+    <section id='work' className="py-16 bg-black text-white">
+      <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
-            Featured Work
+          <h2 className="flex items-center gap-2 text-2xl font-bold mb-12">
+            <code className="text-gray-400">&lt;/&gt;</code> Proyectos
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col gap-16">
             {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
+              <div key={index} className="flex flex-col md:flex-row gap-8">
+                {/* Imagen del proyecto - mismo tamaño para todas */}
+                <div className="w-full md:w-1/2">
+                  <div className="rounded-lg overflow-hidden border border-gray-800 bg-gray-900 aspect-video">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-blue-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4">
-                    {project.description}
-                  </p>
+                {/* Información del proyecto - mismo tamaño para todas */}
+                <div className="w-full md:w-1/2 flex flex-col">
+                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                   
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, tagIndex) => (
+                  {/* Tecnologías usadas */}
+                  <div className="flex gap-2 mb-4">
+                    {project.tech.map((tech, techIndex) => (
                       <span
-                        key={tagIndex}
-                        className="px-3 py-1 text-sm rounded-full bg-blue-500/10 text-blue-400"
+                        key={techIndex}
+                        className={`px-3 py-1 rounded-md text-sm ${
+                          tech.dark 
+                            ? 'bg-gray-800 text-white' 
+                            : 'bg-blue-600 text-white'
+                        }`}
                       >
-                        {tag}
+                        {tech.name}
                       </span>
                     ))}
                   </div>
-
-                  <div className="flex gap-4">
-                    <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                  
+                  <p className="text-gray-400 mb-6">
+                    {project.description}
+                  </p>
+                  
+                  {/* Botones de acción */}
+                  <div className="flex gap-4 mt-auto">
+                    <a 
+                      href="#" 
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-700 transition-colors"
+                    >
                       <Github className="w-5 h-5" />
                       Code
-                    </button>
-                    <a href="https://calculadora-de-consumo-electrico.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                    </a>
+                    <a 
+                      href="#" 
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-700 transition-colors"
+                    >
                       <ExternalLink className="w-5 h-5" />
-                      Live Demo
+                      Preview
                     </a>
                   </div>
                 </div>

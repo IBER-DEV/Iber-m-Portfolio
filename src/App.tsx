@@ -35,36 +35,36 @@ import FeaturedWork from './components/FeaturedWork';
  */
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#work', label: 'Work' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#home', label: 'Inicio' },
+    { href: '#about', label: 'Sobre Mí' },
+    { href: '#work', label: 'Proyectos' },
+    { href: '#skills', label: 'Habilidades' },
+    { href: '#contact', label: 'Contacto' },
   ];
 
   return (
     <div className={`min-h-screen flex flex-col`}>
       {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-black border-b-2 border-blue-500 shadow-[0_4px_20px_rgba(59,130,246,0.3)] backdrop-blur-sm z-50 border-b  transition-colors duration-300">
+      <nav className="fixed top-0 w-full bg-gradient-to-br from-gray-900 via-black to-gray-900 backdrop-blur-sm z-50 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Code2 className="h-8 w-8 text-gray-700 dark:text-gray-300" />
-              <span className="ml-2 font-semibold text-xl text-gray-700 dark:text-gray-300">Ing Iber Masco</span>
+              <span className="ml-2 font-semibold text-xl text-gray-700 dark:text-gray-300"></span>
+              <span className="ml-2 font-semibold text-xl text-blue-400 hover:text-blue-300 text-shadow-[0_0_20px_rgb(0,255,255)]">Ing Iber Masco</span>
             </div>
             <div className="flex items-center space-x-8">
               <div className="hidden sm:flex space-x-8">
                 {navLinks.map((link) => (
-                  <a key={link.href} href={link.href} className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                    {link.label}
-                  </a>
+                  <a key={link.href} href={link.href} className="text-blue-400 hover:text-blue-300 text-shadow-[0_0_20px_rgb(0,255,255)]">
+                    {link.label}</a>
                 ))}
               </div>
               <button onClick={toggleMobileMenu} className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white sm:hidden">
@@ -79,7 +79,7 @@ function App() {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                className="px-4 py-2 text-blue-400 hover:text-blue-300 text-shadow-[0_0_20px_rgb(0,255,255)]"
               >
                 {link.label}
               </a>
@@ -91,22 +91,24 @@ function App() {
       <main className=" min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
         {/* Hero Section */}
         < Hero />
-         {/* About Section */}
-   
-         < About />
-          {/* Project Cards */}
+        {/* About Section */}
 
-          <FeaturedWork />
+        {/* Sección de Habilidades */}
+        < Skills />
+
+
+        < About />
+        {/* Tarjetas de proyectos */}
+
+        <FeaturedWork />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 pt-24 pb-16">
-          
 
 
-         
 
-          {/* Skills Section */}
-          < Skills />
-         
-          {/* Contact Section */}
+
+
+
+          {/* Sección de Contacto */}
 
           <ContactSection />
 

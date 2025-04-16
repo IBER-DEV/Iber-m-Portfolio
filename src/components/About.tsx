@@ -3,24 +3,24 @@ import { Brain, Code, Database, Network } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { icon: <Code className="w-6 h-6" />, name: 'Software Development', description: 'Full-stack development with modern technologies' },
-    { icon: <Network className="w-6 h-6" />, name: 'Network Architecture', description: 'Designing robust and scalable network solutions' },
-    { icon: <Database className="w-6 h-6" />, name: 'System Design', description: 'Creating efficient and maintainable systems' },
-    { icon: <Brain className="w-6 h-6" />, name: 'Problem Solving', description: 'Analytical approach to complex challenges' },
+    { icon: <Code className="w-6 h-6" />, name: 'Desarrollo de Software', description: 'Desarrollo full-stack utilizando las tecnologías más modernas.' },
+    { icon: <Network className="w-6 h-6" />, name: 'Arquitectura de Redes', description: 'Diseño de soluciones de red robustas y escalables.' },
+    { icon: <Database className="w-6 h-6" />, name: 'Diseño de Sistemas', description: 'Creación de sistemas eficientes y fáciles de mantener.' },
+    { icon: <Brain className="w-6 h-6" />, name: 'Resolución de Problemas', description: 'Enfoque analítico para desafíos complejos.' },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
+    <section id='about' className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
-            About Me
+            Sobre Mí
           </h2>
           
           <div className="mb-12 text-gray-300 space-y-4">
             <p className="text-lg leading-relaxed">
-              With over a decade of experience in systems engineering, I specialize in designing and implementing cutting-edge solutions that bridge the gap between complex technical challenges and business needs. My approach combines innovative thinking with practical execution to deliver robust, scalable systems.
-            </p>
+              Con más de 1 año de experiencia en ingeniería de sistemas, me especializo en diseñar e implementar soluciones innovadoras que conectan desafíos técnicos complejos con las necesidades del negocio. Mi enfoque combina pensamiento innovador con ejecución práctica para ofrecer sistemas robustos y escalables.
+              </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
